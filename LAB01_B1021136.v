@@ -99,7 +99,7 @@ module adder_tb();
             $display("m=%b ,a=%d, i=%d ,s=%d ,c_out =%b, oflow=%b ", m,a,i,s,c_out,oflow);
         end    
     endtask
-
+    //加入波型
     initial begin
 
     $dumpfile("addsub.vcd");
