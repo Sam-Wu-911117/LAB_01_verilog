@@ -1,3 +1,4 @@
+// module should without number 
 module HalfAdder (carry,sum,a,b);
 
     input a,b;
@@ -80,7 +81,7 @@ module adder_tb();
     `define period 10
     
    sixteen_adder_subtractor as1(.oflow(oflow),.sum(s),.c_out(c_out),.a(a),.b(i),.m(m));
-
+        // .模組內名稱(tb內名稱)
     initial clk = 0;
     always #(`period/2) clk= ~clk;
     initial begin
