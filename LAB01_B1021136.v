@@ -28,7 +28,8 @@ module sixteen_adder_subtractor(oflow,c_out, sum, a, b, m);
         output  [15:0] sum;
         wire [15:1] c;
         wire [15:0] x;
-
+        assign x[15:0] = b[15:0] ^ m;
+        /*
         xor xor0(x[0],b[0],m);
         xor xor1(x[1],b[1],m);
         xor xor2(x[2],b[2],m);
@@ -45,7 +46,7 @@ module sixteen_adder_subtractor(oflow,c_out, sum, a, b, m);
         xor xor13(x[13],b[13],m);
         xor xor14(x[14],b[14],m);
         xor xor15(x[15],b[15],m);
-
+        */
         FullAdder FA1(sum[0],c[1],a[0],x[0],m);
         FullAdder FA2(sum[1],c[2],a[1],x[1],c[1]);
         FullAdder FA3(sum[2],c[3],a[2],x[2],c[2]);
