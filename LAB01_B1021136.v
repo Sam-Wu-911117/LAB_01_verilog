@@ -28,7 +28,9 @@ module sixteen_adder_subtractor(oflow,c_out, sum, a, b, m);
         output  [15:0] sum;
         wire [15:1] c;
         wire [15:0] x;
+        // xor using RTL
         assign x[15:0] = b[15:0] ^ m;
+        
         /*
         xor xor0(x[0],b[0],m);
         xor xor1(x[1],b[1],m);
